@@ -1,0 +1,255 @@
+/*Variable_Section*/
+:root {
+    --text-color: white;
+    --color-white: #f2f2f2;
+    --color-black: #071629;
+    --color-hover-active: #ff6565;
+    --btn-opacity-active: 0.9;
+    --font-family-001: "Source Sans Pro", sans-serif;
+    --font-family-002: "Spain Cycle OT", sans-serif;
+    --header-bg-color: #071629;
+    --hamburger-line-height: 2px;
+}
+
+/*Base_Section*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    width: 100%;
+}
+
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-001);
+}
+
+.Button {
+    color: var(--text-color);
+    background-color: var(--color-hover-active);
+    outline: none;
+    border: 0px;
+    border-radius: 22px;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    width: 162px;
+    height: 44px;
+}
+
+.Button:hover,
+.Button:active {
+    opacity: var(--btn-opacity-hover-active);
+}
+
+a:hover,
+a:active {
+    color: var(--link-color-hover-active);
+}
+
+.CONTAINER {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Header_Section*/
+.HEADER {
+    background-image: url(images/headphones_hero_1.jpg);
+    width: 2560px;
+    height: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+}
+
+.HContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.HLogo {
+    width: 161px;
+    height: 30px;
+    margin-left: -350px;
+}
+
+.Nav {
+    list-style: none;
+    display: flex;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    font-style: normal;
+    margin-right: -300px;
+}
+
+.Nav_Item {
+    margin: 0 40px 0 40px;
+}
+
+.Nav_Item:first-child,
+.Nav_Item:last-child {
+    margin: 0;
+}
+
+.Nav_Link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.Nav_Link:hover {
+    color: var(--color-hover-active);
+}
+
+/*HERO_Section*/
+.HERO {
+    padding-top: 300px;
+    max-width: 637px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.HERO h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.HEADER span {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.HEADER p {
+    font-size: 1rem;
+    line-height: 28px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.HERO .Button {
+    margin: 40px auto 60px;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
+}
+
+/*Hamburger_Section*/
+.Menu_Icon {
+    cursor: pointer;
+    position: absolute;
+    user-select: none;
+    height: 2px;
+    top: 38px;
+    display: none;
+}
+
+.Navicon {
+    display: block;
+    width: 13px;
+    height: 2px;
+    background: var(--color-white);
+    border-radius: 2px;
+}
+
+.Menu_Icon .Navicon::before,
+.Menu_Icon .Navicon::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    background: var(--color-white);
+    transition: all 0.2s ease-out;
+    border-radius: 2px;
+}
+
+.Menu_Icon .Navicon::before {
+    width: 18px;
+    top: calc(4px + 2px);
+}
+
+.Menu_Icon .Navicon::after {
+    top: calc(4px - 2px);
+}
+
+.Menu_Button:checked~.Navbar_Menu {
+    display: block;
+}
+
+.Menu_Button:checked~.Menu_Icon .Navicon::before {
+    transform: rotate(-45deg);
+    width: 20px;
+    top: 0px;
+}
+
+.Menu_Button:checked~.Menu_Icon .Navicon::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.Menu_Button:checked~.Menu_Icon .Navicon {
+    width: 0;
+}
+
+/*What we do Section*/
+.WhatWeDo_Section {
+    color: var(--color-black);
+    padding-top: 100px;
+    max-width: 637px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.WhatWeDo_Section .WhatWeDo_F_Section h2 {
+    font-size: 32px;
+    font-family: var(--font-family-001);
+    line-height: 37.5px;
+    text-align: center;
+}
+
+.WhatWeDo_Section .WhatWeDo_F_Section p {
+    font-size: 1rem;
+    line-height: 28px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.WhatWeDo_Icons {
+    color: var(--color-black);
+    margin-bottom: 110px;
+    max-width: 1002px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    padding: 70px;
+}
+
+.WhatWeDo001 h3 {
+    font-size: 18px;
+}
+
+.WhatWeDo001 p {
+    line-height: 28px;
+}
+
+.Icon {
+    font-size: 6em;
+    color: var(--color-hover-active);
+}
+
+.Icon002 {
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.Icon003 {
+    padding-right: 60px;
+}
